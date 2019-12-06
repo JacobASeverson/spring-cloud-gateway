@@ -694,6 +694,10 @@ public class GatewayAutoConfiguration {
 				webSocketClient.setMaxFramePayloadLength(
 						properties.getWebsocket().getMaxFramePayloadLength());
 			}
+			if (properties.getWebsocket().isProxyPing()) {
+				webSocketClient.setProxyPing(properties.getWebsocket().isProxyPing());
+			}
+
 			return webSocketClient;
 		}
 

@@ -544,12 +544,22 @@ public class HttpClientProperties {
 		/** Max frame payload length. */
 		private Integer maxFramePayloadLength;
 
+		private boolean proxyPing = false;
+
 		public Integer getMaxFramePayloadLength() {
 			return this.maxFramePayloadLength;
 		}
 
 		public void setMaxFramePayloadLength(Integer maxFramePayloadLength) {
 			this.maxFramePayloadLength = maxFramePayloadLength;
+		}
+
+		public boolean isProxyPing() {
+			return this.proxyPing;
+		}
+
+		public void setProxyPing(boolean proxyPing) {
+			this.proxyPing = proxyPing;
 		}
 
 		@Override
